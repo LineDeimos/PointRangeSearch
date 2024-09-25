@@ -1,4 +1,4 @@
-#ifndef KDTREE_HPP
+п»ї#ifndef KDTREE_HPP
 #define KDTREE_HPP
 
 #include <vector>
@@ -11,7 +11,7 @@ struct Node {
     Point point;
     Node* left;
     Node* right;
-    int axis; // 0 для оси x, 1 для оси y
+    int axis; // 0 РґР»СЏ РѕСЃРё x, 1 РґР»СЏ РѕСЃРё y
 
     Node(Point p, int a);
 };

@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "KDTree.hpp"
 #include <cstdlib>
 #include <ctime>
@@ -11,7 +11,7 @@ int main() {
     int start = 1;
     int end = 100;
 
-    // Генерация случайных точек (случайные данные для проверки)
+    // Р“РµРЅРµСЂР°С†РёСЏ СЃР»СѓС‡Р°Р№РЅС‹С… С‚РѕС‡РµРє (СЃР»СѓС‡Р°Р№РЅС‹Рµ РґР°РЅРЅС‹Рµ РґР»СЏ РїСЂРѕРІРµСЂРєРё)
     for (int i = 0; i < numPoints; i++) {
         Point tmp;
         tmp.x = rand() % (end - start + 1) + start;
@@ -21,7 +21,7 @@ int main() {
 
     KDTree kdTree(points);
 
-    // Диапазоны для выборки
+    // Р”РёР°РїР°Р·РѕРЅС‹ РґР»СЏ РІС‹Р±РѕСЂРєРё
     double xMin = 10, xMax = 20, yMin = 1, yMax = 15;
     std::cout << "Enter the range for selection (xMin xMax yMin yMax) " << start << " - " << end << ": ";
     std::cin >> xMin >> xMax >> yMin >> yMax;
@@ -29,7 +29,7 @@ int main() {
 
     std::cout << "Points in range (" << xMin << ", " << yMin << ") to (" << xMax << ", " << yMax << "):\n";
     
-    // Для проверки на малом кол-во точек
+    // Р”Р»СЏ РїСЂРѕРІРµСЂРєРё РЅР° РјР°Р»РѕРј РєРѕР»-РІРѕ С‚РѕС‡РµРє
     for (const Point& p : result) {
         std::cout << "(" << p.x << ", " << p.y << ")\n";
     }

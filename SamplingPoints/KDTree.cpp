@@ -1,4 +1,4 @@
-#include "KDTree.hpp"
+п»ї#include "KDTree.hpp"
 #include <algorithm>
 
 Node::Node(Point p, int a) : point(p), left(nullptr), right(nullptr), axis(a) {}
@@ -8,7 +8,7 @@ Node* KDTree::buildTree(std::vector<Point>& points, int depth, int start, int en
 
     int axis = depth % 2;
 
-    // Сортиртировка текущего участка массива по оси (0 по x, 1 по y)
+    // РЎРѕСЂС‚РёСЂС‚РёСЂРѕРІРєР° С‚РµРєСѓС‰РµРіРѕ СѓС‡Р°СЃС‚РєР° РјР°СЃСЃРёРІР° РїРѕ РѕСЃРё (0 РїРѕ x, 1 РїРѕ y)
     if (axis == 0) {
         std::sort(points.begin() + start, points.begin() + end, [](Point a, Point b) { return a.x < b.x; });
     } else {
